@@ -1,0 +1,45 @@
+body {}
+
+.starter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mat-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 92vh !important;
+}
+
+textarea {
+    resize: none !important;
+}
+
+.mat-form-field {
+    width: 50% !important;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.logos img {
+    width: 30% !important;
+}
+
+.plus {
+    font-size: 35px !important;
+    height: 35px !important;
+    width: 35px !important;
+}
+
+.mat-hint {
+    color: #e53935 !important;
+}

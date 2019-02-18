@@ -1,0 +1,57 @@
+<body [formGroup]="emailForm">
+
+  <mat-card>
+
+      <div class="starter">
+          <h4>Avant d'envoyer tes emails, active l'accès pour les applis moins sécurisé, sinon tu seras bloquer par les CORS de GMAIL
+            et cie...</h4>
+          <span>
+            Clique
+            <a href="https://myaccount.google.com/lesssecureapps" target="_blank">ICI</a>
+          </span>
+        </div>
+
+    <div class="logos">
+      <img src="assets/images/angular.png" alt="angular">
+      <mat-icon class="plus">add</mat-icon>
+      <img src="assets/images/nodemailer.png" alt="nodemailer">
+      <mat-icon class="plus">add</mat-icon>
+      <img src="assets/images/gmail.png" alt="nodemailer">
+    </div>
+
+    <mat-form-field class="example-chip-list">
+      <mat-chip-list #chipList>
+        <mat-chip *ngFor="let email of emailArray" [selectable]="selectable" [removable]="removable" (removed)="remove(email)">
+          {{email}}
+          <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+        </mat-chip>
+        <input placeholder="Ajoutez une ou plusieurs adresses email" [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+          [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)" formControlName="emailArrayControl">
+      </mat-chip-list>
+    </mat-form-field>
+
+
+
+    <mat-form-field appearance="outline">
+      <mat-label>Object</mat-label>
+      <input matInput placeholder="Le sujet" formControlName="objectControl">
+      <mat-icon matSuffix>attach_file</mat-icon>
+      <mat-hint *ngIf="objectControl?.touched && objectControl?.invalid">Ce champs est obligatoire</mat-hint>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline">
+      <mat-label>Votre message</mat-label>
+      <textarea matInput placeholder="Votre message" formControlName="messageControl"></textarea>
+      <mat-hint *ngIf="messageControl?.touched && messageControl?.invalid">Ce champs est obligatoire</mat-hint>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" [disabled]="emailForm?.invalid || !addedEmail" (click)="emailFormFunction(emailForm)">Envoyer un mail</button>
+
+    <div class="example-button-row">
+      <mat-spinner [diameter]="50" color="primary" *ngIf="loadingState"></mat-spinner>
+    </div>
+
+  </mat-card>
+
+</body>
