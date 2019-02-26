@@ -8,7 +8,7 @@ puis faire la commande : nodemon ./server-node.js ou npm start
 
 ⚠️⚠️⚠️ ATTENTION AVANT D'ENVOYER LES MAILS IL FAUT ACTIVER L'ACCES AUX APPLIS EXTERNES AFIN DE POUVOIR ENVOYER DES MAILS. et ne pas etre bloquer par les CORS 
 
-  <img src="https://github.com/DDieudonne/ionic-pdf-viewer/blob/master/localhost_8100_(iPhone%206_7_8)%20(1).png" width="30%">
+  <img src="https://github.com/DDieudonne/angular-material-mailer/blob/master/angular-mailer.png" width="30%">
 
 
 # 1) NPM INSTALL
