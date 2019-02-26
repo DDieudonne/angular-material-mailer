@@ -6,6 +6,11 @@ Pour lancer l'applis ANGULAR seulement il faut faire la commande : ng serve
 Pour lancer le FRONT et le BACK il faut builder l'applis : ng build
 puis faire la commande : nodemon ./server-node.js ou npm start
 
-🔥🔥🔥⚠️⚠️⚠️ ATTENTION AVANT D'ENVOYER LES MAILS IL FAUT ACTIVER L'ACCES AUX APPLIS EXTERNES AFIN DE POUVOIR ENVOYER DES MAILS. et ne pas etre bloquer par les CORS 
+⚠️⚠️⚠️ ATTENTION AVANT D'ENVOYER LES MAILS IL FAUT ACTIVER L'ACCES AUX APPLIS EXTERNES AFIN DE POUVOIR ENVOYER DES MAILS. et ne pas etre bloquer par les CORS 
 
-😀😀😀
+# 1) NPM INSTALL
+# 2) NG BUILD
+# 3) nodemon .\server-node.js
+
+ #  🔥🔥🔥 🔥🔥🔥FORCE A VOUS !!
+
